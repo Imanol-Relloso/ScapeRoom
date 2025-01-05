@@ -232,7 +232,7 @@ do
                 string objetoCaja = objeto.ToLower();
                 if (objetoCaja == "3872")
                 {
-                    Console.WriteLine("Abres la caja fuerte y encuentras una bombilla morada y un trozo de papel, pero parece no parece tener nada escrito");
+                    Console.WriteLine("Abres la caja fuerte y encuentras una bombilla morada y un trozo de papel, pero no parece tener nada escrito");
                     bombilla = 1;
 
                 }else if (objetoCaja == "pista" && pista7 == 0)
