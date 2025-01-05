@@ -349,8 +349,8 @@ do
     }
 } while (!done);
 Console.WriteLine("ENHORABUENA!!! Has escapado!!!");
-float puntuacion = 10;
-float penalizaciones = 0;
+int puntuacion = 10;
+int penalizaciones = 0;
 
 penalizaciones = pista1 + pista2 + pista3 + pista4 + pista5 + pista6 + pista7 + pista8 + pista9 + pista0;
 puntuacion = puntuacion - (penalizaciones/2);
