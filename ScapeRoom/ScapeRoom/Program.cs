@@ -22,6 +22,15 @@ int llave = 0;
 int cerillas = 0;
 int llaveAvion = 0;
 int pista1 = 0;
+int pista2 = 0;
+int pista3 = 0;
+int pista4 = 0;
+int pista5 = 0;
+int pista6 = 0;
+int pista7 = 0;
+int pista8 = 0;
+int pista9 = 0;
+int pista0 = 0;
 var done = false;
 do
 {
@@ -80,6 +89,16 @@ do
                 {
                     Console.WriteLine("Mueves el cuadro y hay una cajetilla de cerillas.\n (Has obtenido cerillas)");
                     cerillas = 1;
+                }else if (objetoCuadro == "pista" && pista2 == 0)
+                {
+                    Console.WriteLine("Pista 1: Parece que el cuadro está hueco.");
+                    pista2 = 1;
+                }else if (objetoCuadro == "pista" && pista2 == 1){
+                    Console.WriteLine("Pista 2: Tiene como algún mecanismo para moverlo.");
+                    pista2 = 2; 
+                }else if (objetoCuadro == "pista" && pista2 == 2)
+                {
+                    Console.WriteLine("Pista 3: Escribe “mover” para mover el cuadro.");
                 }
                 Console.WriteLine("(Pulse Enter para volver)");
                 volver = Console.ReadKey().Key;
@@ -94,9 +113,20 @@ do
                 string objeto = Console.ReadLine();
                 string objetoGlobo = objeto.ToLower();
 
-                if (llaveAvion == 1 && objetoGlobo == "avion")
+                if (llaveAvion == 1 && objetoGlobo == "avion"|| llaveAvion == 1 && objetoGlobo == "avión")
                 {
-                    Console.WriteLine("Sitúas el avión en el carril y se activa un mecanismo que abre el globo por la mitad. \nDentro del globo ves que hay 3 escrito en un papel.");
+                    Console.WriteLine("Sitúas el avión en el carril y se activa un mecanismo que abre el globo por la mitad. \nDentro del globo ves que hay  un 3 escrito en un papel.");
+                }else if (objetoGlobo == "pista" && pista3 == 0)
+                {
+                    Console.WriteLine("Pista 1: En algún lugar tendrá que haber un objeto");
+                    pista3 = 1;
+                }else if (objetoGlobo == "pista" && pista3 == 1)
+                {
+                    Console.WriteLine("Pista 2: Ves a lo lejos en las estanterías un libro en el que pone “Grecia”.");
+                    pista3 = 2;
+                }else if (objetoGlobo == "pista" && pista3 == 2)
+                {
+                    Console.WriteLine("Pista 3: Ve a la estantería y escribe “Grecia”. Luego, vuelve y escribe “Avión”.");
                 }
                 else
                 {
