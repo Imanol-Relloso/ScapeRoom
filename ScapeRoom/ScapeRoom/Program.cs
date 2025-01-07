@@ -19,6 +19,9 @@ do
    
 } while (continuar != ConsoleKey.Enter);
 
+// stopwatch
+var watch = System.Diagnostics.Stopwatch.StartNew();
+
 ConsoleKey volver;
 
 //Inicializar los objetos y las pistas.
@@ -424,6 +427,24 @@ do
 } while (!done);
 //Mensaje de victoria
 Console.WriteLine("ENHORABUENA!!! Has escapado!!!");
+//stopwatch stop
+watch.Stop();
+var elapsedMs = watch.ElapsedMilliseconds;
+
+if (elapsedMs < 60000)
+{
+    var tiempoSeg = elapsedMs / 1000;
+    Console.WriteLine("Tu tiempo final es de " + elapsedMs);
+}else if (elapsedMs >= 60000){
+    var tiempoMin = elapsedMs / 60000;
+    int minutos = (int) tiempoMin;
+
+    var tiempoSeg = (elapsedMs - (tiempoMin * 60000))/ 1000;
+    Console.WriteLine("Tu tiempo final es de " + minutos + "min " + tiempoSeg +"seg.");
+}
+
+
+
 //Puntuaje final recuento
 int puntuacion = 10;
 int penalizaciones = 0;
