@@ -429,6 +429,8 @@ do
                 {
                     Console.WriteLine("Has introducido los 3 numeros y el candado se ha abierto. Ya puedes salir");
                     done = true;
+                    //Detener el cronometro interno
+                    watch.Stop();
                 }
                 //Pistas
                 else if (objetoSalida == "pista" && pista0 == 0)
@@ -461,8 +463,6 @@ do
 } while (!done);
 //Mensaje de victoria
 Console.WriteLine("ENHORABUENA!!! Has escapado!!!");
-//stopwatch stop
-watch.Stop();
 var elapsedMs = watch.ElapsedMilliseconds;
 
 if (elapsedMs < 60000)
