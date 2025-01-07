@@ -468,7 +468,7 @@ var elapsedMs = watch.ElapsedMilliseconds;
 if (elapsedMs < 60000)
 {
     var tiempoSeg = elapsedMs / 1000;
-    Console.WriteLine("Tu tiempo final es de " + elapsedMs);
+    Console.WriteLine("Tu tiempo final es de " + tiempoSeg);
 }else if (elapsedMs >= 60000){
     var tiempoMin = elapsedMs / 60000;
     int minutos = (int) tiempoMin;
