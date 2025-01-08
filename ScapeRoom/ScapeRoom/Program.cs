@@ -90,6 +90,7 @@ do
                 }else if (objetoCajon == "pista" && pista1 == 2)
                 {
                     Console.WriteLine("Pista 3: Enciende la chimenea, parece que ahí está la llave para abrir el cajón. Y luego vuelve aquí y escribe “abrir”.");
+                    pista1 = 3;
                 }
                 //Si no pasa la prueba
                 else
@@ -132,6 +133,7 @@ do
                 }else if (objetoCuadro == "pista" && pista2 == 2)
                 {
                     Console.WriteLine("Pista 3: Escribe “mover” para mover el cuadro.");
+                    pista2 = 3;
                 }
                 //Para salir de la habitación
                 Console.WriteLine("(Pulse Enter para volver)");
@@ -169,6 +171,7 @@ do
                 }else if (objetoGlobo == "pista" && pista3 == 2)
                 {
                     Console.WriteLine("Pista 3: Ve a la estantería y escribe “Grecia”. Luego, vuelve y escribe “Avión”.");
+                    pista3 = 3;
                 }
                 //Si no pasa la prueba
                 else
@@ -207,9 +210,11 @@ do
                 }else if (objetoMesa == "pista" && pista4 == 1)
                 {
                     Console.WriteLine("Tiene que haber un nombre importante por la habitacion.");
+                    pista4 = 2;
                 }else if (objetoMesa == "pista" && pista4 == 2)
                 {
                     Console.WriteLine("Intentas abrir el cajon a la fuerza, pero parece imposible.");
+                    pista4 = 3;
                 }
                 //Volver
                 Console.WriteLine("(Pulse Enter para volver)");
@@ -247,6 +252,7 @@ do
                 }else if (objetoEstanteria == "pista" && pista5 == 2)
                 {
                     Console.WriteLine("Pista 3: Si escribes “grecia” abriras el libro de Grecia que te dará un objeto.");  
+                    pista5 = 3;
                 }
                 //Volver
                 Console.WriteLine("(Pulse Enter para volver)");
@@ -285,6 +291,7 @@ do
                 }else if (objetoChimenea == "pista" && pista6 == 2)
                 {
                     Console.WriteLine("Pista 3: Busca en el cuadro unas cerillas y luego vuelve a la chimenea y escribe “cerillas”.");
+                    pista6 = 3;
                 }
                 //Volver
                 Console.WriteLine("(Pulse Enter para volver)");
@@ -298,7 +305,7 @@ do
                 //Descripción
                 Console.Clear();
                 Console.Write("\u001bc\x1b[3J");
-                Console.WriteLine("Te acercas a la caja fuerte y ves que se abre con un pin de 4 numeros.");
+                Console.WriteLine("Te acercas a la caja fuerte y ves que se abre con un pin de 4 dígitos.");
                 //Escenario
                 Console.WriteLine("\nO,..';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,;:cdOXWMMMMMMMMMMMMMMMMM\r\nx. ..o0KKKKKKKKKKKKKKKKKKKKKKKKKKXKKKKKKK0000000000Oxl:;;:cdOXWMMMMMMMMMMMM\r\nd.';..:OXXXXXXXXXXXXXXXXXXXXXXXXKKKKK0000000000000000KK0Odl;,,:lkKNMMMMMMMM\r\nd.,lc,..dKXXXXXXXXXXXXXXXKKKKKKK0000000000000000000000000000Oxo:,';lx0NMMMM\r\no.,lloc..:OXKKKKK000OOOOkkkkkkkkkkkxxxxxxxxxxxxxxxxxxxxkkxkkkkkkkdl;..,l0WM\r\nl.,llool. .;;;;;;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,'.  ;XM\r\nc.;llooo, .lddxxxxxxxkkkkkkkOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkkkxxxddo' '0M\r\nc.;loooo' ;kkkkkkkkkkkkkkkkkkkkkkOOOOOOOOOOOOO0000000OOOOOOOOOkkkkkkkx, .OM\r\n:.;ooool' :kkkkkOOOOOkkkkkkkkkkkkkkkkkkkkxxxxxxxxxxxxxxxxxxxxxxxkkkkOk; .kM\r\n:.;ooool. :kkkkOko:c:;::::::::::::::::::::::;;;;;;;;;;;::::;;,.,dOkkkk: .xM\r\n;.:ooool..cOkkkOx,'odddxxxxxxxxxxkkOOOOOOOOOOOOOOOOOOOOOO0OO0x..dOkkkk: .dM\r\n;.:ooool..lOOOkOd.,xkkkkkkkkkkkkkkkkOOO0000000000KKKK00000000k'.oOkkkkc  oW\r\n;.:ooooc..lOOkkOd.,kOkkkkkkkkkkkkkkkkkkkOO000000KKKK00000000Kk,.oOkkkkc. lW\r\n,.:ooodl..oOkkkkl.;kOkkkkkkkkkkkkkkkkkkkkkkOOO000KK000000000KO,.lOkkkOl. cN\r\n,.:ooodl..lOxc,,..;kOkkkkkkkkkkkkkkkkkkkkkkkOOOOOO0000000000KO;.cOkkkOl. :N\r\n,.cdoddc..lOo':x;.:kkkkkkkkkkkkkkkkkkkkkkkOOOOkkkkkOOO00000000:.ckkkkOo. ;X\r\n'.cooodc..lOo'oKc.:kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOOO0000:.:kkkkOo. ;K\r\n'.cooooc..oOo,o0c.:kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOOOc.:kkkkOo. ,K\r\n'.cooooc..oOo,lOc.:kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOl.;kkkkOd. '0\r\n..cdoooc..oOo,lOc.:kkkkkkkkkkkkkkkkkkkkkOOkkxxxxxkkOOkkkkkkkkOl.,kkkkOd. '0\r\n..cdooo:..oOd,cOc.:kkkkkkkkkkkkkkkkkkkxl:;,,,,,,,,;;:ldkOkkkkOo.,kOkkOx' .O\r\n..cdood:..oOkc,:'.:kkkkkkkkkkOOOkkko;'..',::::::::;;,'',:okOkOo.'xOkOOx' .k\r\n..cdooo:..oOkxoo:.:kkkkkkkkOOOkkkd,.',:c:,',;;;;;,,,,;c:,.'cxOo.'xOOOOx, .k\r\n..coooo:..oOkxdxl.:kkkkkkOOOkkkkl..:cc;..;oxkkxddol;''.':c,.'od.'xOkkOx, .x\r\n..coooo:..oOkxdxl.:kkkkOOOOkkkOo..:c,..'lxkkkxl:;;;;cc:,.,c:..:.'xOkkOk; .x\r\n..coooo:..oOkxdxl.:kkkOOkkkkkOk;.;l;. .loddo:.......':lc,.'cc'. .dOkkOk; .d\r\n..coooo:..oOkkxxl':OkkkkkkkkkOx,.:l'..,cccc' .;;;;;. 'lod:.,l;. .dOkkkk;  d\r\n..coooo:..oOkkxxo'cOOkkkkkkkkOk,.:l'..;llc:. .:c:::' .lddl''c:. .dOkkkk:  o\r\n..coooo:..oOkkxxo,cOOkkkkkkkkkk:.,l;..'clc:,...'''. .;lool..cc. .dOkkkk:  o\r\n..coooo:..lOkOkko':kkkkkkkkkkkOd..:c'..'cccc:,,'...,cllll,.,l:. .dOkkkkc  l\r\n..coooo:..lOOOkOd';kkkkkkkkkkkkko..:c:,..;c:coollloolllc,.'cc'  .oOkkkkc. c\r\n .cdooo:..lOkkkOd';kkkkkkkkkkkkkko'.,:c:'..';:ccllcc:,'..;cc'.'..oOkkkOc. c\r\n .coooo:..lOkkkOd';xxkkkkkkkkkkkkkxc'..,:c:,'''''.....';c:,..co'.oOkkkOl. :\r\n .cdooo:..lOkkkOd';xxxxkkkkkkkkkkkkkxol,'.',:cccc:cccc:,...;dkx'.oOkkkOl. :\r\n .cdoll:..cOkkkOd',xxddxkkkkkkkkkkkkkkkkxoc:;,,'''''''',:lxkkOx'.oOkkkOo. ;\r\n .colll:. ckkkkOd',xxdxxxxkkkkkkkkkkkkkkkkkOkkxxdddddxkkOkkkkOx,.lOkkkOo. ;\r\n .colll:. ckkkkOx',xxdddddxxkkkkkkkkkkkkkkkkkkkkkkkkkkkOkkkkkOk,.lOkkkOo. ,\r\n .:llll:. ckOd::;.,xxddxddddxxkkkkkkkkkkkkkkkkkkkkkOkl;;okOkkOk,.lOkkkOo. ,\r\n .:llll:. :kkc:kc ,dxdxxdddddxxkkkkkkkkkkkkkkkkkkkkOk:. ;kOkkOk;.cOkkkOd. ,\r\n .:llll:. :kk:c0o.'dxddxddddddxxxkkkkkkkkkkkkkkkkkkkOo. :kkkkkk;.ckkOkOd. '\r\n .:llll:. :kk::Oo.'dxddddddxxxxxxxxkkkkkkkkkkkkkkkkOx;..'dOkkkk;.cOOOOOd' '\r\n .:llllc. ;kk:;kl.'dxddddxxxxxxddddxkkkkkkkkkkkkkkkkkxxxxkkkkkk:.cOOOkOx' .\r\n .;llllc. ;kkc;xl.'dxddxxxxxxdddddddxxxkkkkkkkkkkkkkkkkkkkkkkkk:.ckkkkOx' .\r\n: .:lllc. ;kOc'c; 'dxdxxxxxddddddddddddxxkkkkkkkkkkkkkkkkkkkkOO:.:kkkkOx, .\r\nK, .cllc. ,xOx:,'.'dxxxxxddddddddddddddddxxkkkkkkkkkkkkkkkkkkOk:.;kkkkOx, .\r\nM0' .clc. ,xOkkOd'.loooooddddddddddddddddddxxxxxxxxxxxxxxxxdddd; ;kkkkOx, .\r\nMWO' .cc. 'xOkkOkc;:;,,,,,,,,,,,,,,,,,,,,,,,,,,,,''''',,,;;,''''.ckkkkOx, .\r\nMMMO' .:' 'xOkkkkkkxxdddddddddddddddddoooooooooooooooodddddddddddxkkkkOk; .\r\nMMMWO, .. .dOOkkkkkkkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkkkkkkk; .\r\nMMMMM0;   .okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOOOOOkkkkkkkkkkkkkxxxxxd, .\r\nMMMMMMXl. .......''''''''',,,,,,,,,,,,,,,,,,,,,;;,,,,,,''''''''''.......  .\r\nMMMMMMMNo.......                               .                ..........:\r\n");
                 //Recoger la respuesta 
@@ -322,6 +329,7 @@ do
                     pista7 = 2;
                 }else if (objetoCaja == "pista" && pista7 == 2){
                     Console.WriteLine("Pista 3: Abre el cajon de la mesa donde encontraras un USB, conectalo al ordenador y te saldra la combinacion");
+                    pista7 = 3;
                 }
                 //Si no acierta el código
                 else
@@ -366,6 +374,7 @@ do
                 else if (objetoOrdenador == "pista" && pista8 == 2)
                 {
                     Console.WriteLine("Pista 3: Mete el nombre de 'Mario' en el candado del cajon de la mesa, ahi obtendras un USB que podras usar escribiendo 'USB'.");
+                    pista8 = 3;
                 }
                 //Volver
                 Console.WriteLine("(Pulse Enter para volver)");
@@ -404,6 +413,7 @@ do
                 else if (objetoLampara == "pista" && pista9 == 2)
                 {
                     Console.WriteLine("Pista 3: Abre la caja fuerte y encontraras la bombilla ahi.");
+                    pista9 = 3;
 
                 }
                 //Volver
@@ -443,6 +453,7 @@ do
                 }else if (objetoSalida == "pista" && pista0 == 2)
                 {
                     Console.WriteLine("Pista 3: Uno de los numeros esta en el cajon.");
+                    pista0 = 3;
                 }
                 //Volver
                 Console.WriteLine("(Pulse Enter)");
@@ -452,6 +463,8 @@ do
         //si no pone ningún número de los que hay.
         default:
             //Poner a pensar al jugador.
+            Console.Clear();
+            Console.Write("\u001bc\x1b[3J");
             Console.WriteLine("Porque estas aqui?...");
             Console.WriteLine("No te decides en que hacer?");
             Console.WriteLine("Piensa un poco.");
@@ -462,13 +475,34 @@ do
 //Si aciertas el código sales del bucle
 } while (!done);
 //Mensaje de victoria
+Console.Clear();
+Console.Write("\u001bc\x1b[3J");
 Console.WriteLine("ENHORABUENA!!! Has escapado!!!");
+
 var elapsedMs = watch.ElapsedMilliseconds;
+
+//Pistas que penalizan
+if (pista1 != 0) { pista1 = pista1 - 1; }
+if (pista2 != 0) { pista2 = pista2 - 1; }
+if (pista3 != 0) { pista3 = pista3 - 1; }
+if (pista4 != 0) { pista4 = pista4 - 1; }
+if (pista5 != 0) { pista5 = pista5 - 1; }
+if (pista6 != 0) { pista6 = pista6 - 1; }
+if (pista7 != 0) { pista7 = pista7 - 1; }
+if (pista8 != 0) { pista8 = pista8 - 1; }
+if (pista9 != 0) { pista9 = pista9 - 1; }
+if (pista0 != 0) { pista0 = pista0 - 1; }
+
+//Penalización total
+int penalizaciones = pista1 + pista2 + pista3 + pista4 + pista5 + pista6 + pista7 + pista8 + pista9 + pista0;
+
+//Sumar 30 segundos por pista usada
+elapsedMs = elapsedMs + (penalizaciones * 30000);
 
 if (elapsedMs < 60000)
 {
     var tiempoSeg = elapsedMs / 1000;
-    Console.WriteLine("Tu tiempo final es de " + tiempoSeg);
+    Console.WriteLine("Tu tiempo final es de " + tiempoSeg + "seg.");
 }else if (elapsedMs >= 60000){
     var tiempoMin = elapsedMs / 60000;
     int minutos = (int) tiempoMin;
@@ -477,13 +511,10 @@ if (elapsedMs < 60000)
     Console.WriteLine("Tu tiempo final es de " + minutos + "min " + tiempoSeg +"seg.");
 }
 
-
-
 //Puntuaje final recuento
-int puntuacion = 10;
-int penalizaciones = 0;
+int puntuacion = 100;
+penalizaciones = penalizaciones * 10;
 
-penalizaciones = pista1 + pista2 + pista3 + pista4 + pista5 + pista6 + pista7 + pista8 + pista9 + pista0;
 puntuacion = puntuacion - (penalizaciones/2);
 //Mostrar puntuaje final
 Console.WriteLine("Tu puntuacion es de " + puntuacion +" sobre 10");
