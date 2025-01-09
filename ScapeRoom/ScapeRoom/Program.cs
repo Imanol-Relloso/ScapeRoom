@@ -26,11 +26,11 @@ var watch = System.Diagnostics.Stopwatch.StartNew();
 ConsoleKey volver;
 
 //Inicializar los objetos y las pistas.
-int llave = 0;
-int cerillas = 0;
-int llaveAvion = 0;
-int USB = 0;
-int bombilla = 0;
+bool llave = false;
+bool cerillas = false;
+bool llaveAvion = false;
+bool USB = false;
+bool bombilla = false;
 int pista1 = 0;
 int pista2 = 0;
 int pista3 = 0;
@@ -74,7 +74,7 @@ do
                 string objetoCajon = objeto.ToLower();
                 
                 //si pasa la prueba
-                if (llave == 1 && objetoCajon == "llave")
+                if ((llave) && (objetoCajon == "llave"))
                 {
                     Console.WriteLine("Has logrado abrir el cajón. \nParece que hay un papel. En él pone un 6.");
                 }
@@ -120,7 +120,7 @@ do
                 if(objetoCuadro == "mover")
                 {
                     Console.WriteLine("Mueves el cuadro y hay una cajetilla de cerillas.\n (Has obtenido cerillas)");
-                    cerillas = 1;
+                    cerillas = true;
                 }
                 //Pistas
                 else if (objetoCuadro == "pista" && pista2 == 0)
@@ -155,7 +155,7 @@ do
                 string objeto = Console.ReadLine();
                 string objetoGlobo = objeto.ToLower();
                 //Si pasa la prueba
-                if (llaveAvion == 1 && objetoGlobo == "avion"|| llaveAvion == 1 && objetoGlobo == "avión")
+                if ((llaveAvion) && (objetoGlobo == "avion")|| (llaveAvion) && (objetoGlobo == "avión"))
                 {
                     Console.WriteLine("Sitúas el avión en el carril y se activa un mecanismo que abre el globo por la mitad. \nDentro del globo ves que hay  un 3 escrito en un papel.");
                 }
@@ -200,7 +200,7 @@ do
                 if (objetoMesa == "mario")
                 {
                     Console.WriteLine("Abres el cajon y encuentras un USB. Parece que puedes usarlo en el ordenador de aqui. \n (Has obtenido USB)");
-                    USB = 1;
+                    USB = true;
                 }
                 //Pistas
                 else if (objetoMesa == "pista" && pista4 == 0)
@@ -238,7 +238,7 @@ do
                 if (objetoEstanteria == "grecia")
                 {
                     Console.WriteLine("Abres el libro de Grecia y cae un avión de metal al suelo. \nDecides guardarte el avión por si te sirve en algún futuro.");
-                    llaveAvion = 1;
+                    llaveAvion = true;
                 }
                 //Pistas
                 else if (objetoEstanteria == "pista" && pista5 == 0)
@@ -273,10 +273,10 @@ do
                 string objeto = Console.ReadLine();
                 string objetoChimenea = objeto.ToLower();
                 //Si pasa la prueba
-                if (objetoChimenea == "cerillas" && cerillas == 1)
+                if (objetoChimenea == "cerillas" && (cerillas))
                 {
                     Console.WriteLine("Vas a encender la chimenea y encuentras una llave debajo de los troncos. \nParece que te será útil para un futuro y decides cogerla.");
-                    llave = 1;
+                    llave = true;
                 }
                 //Pistas
                 else if (objetoChimenea == "pista" && pista6 == 0)
@@ -315,7 +315,7 @@ do
                 if (objetoCaja == "3872")
                 {
                     Console.WriteLine("Abres la caja fuerte y encuentras una bombilla morada y un trozo de papel, pero no parece tener nada escrito");
-                    bombilla = 1;
+                    bombilla = true;
 
                 }
                 //Pistas
@@ -355,7 +355,7 @@ do
                 string objeto = Console.ReadLine();
                 string objetoOrdenador = objeto.ToLower();
                 //Si pasas la prueba
-                if (objetoOrdenador == "usb" && USB == 1)
+                if ((objetoOrdenador == "usb") && (USB))
                 {
                     Console.WriteLine("Insertas el USB y se abre una carpeta con 4 numeros 3872.");
 
@@ -395,7 +395,7 @@ do
                 string objeto = Console.ReadLine();
                 string objetoLampara = objeto.ToLower();
                 //Si pasas la prueba
-                if (objetoLampara == "bombilla" && bombilla == 1)
+                if (objetoLampara == "bombilla" && (bombilla))
                 {
                     Console.WriteLine("Colocas la bombilla y la lampara empieza a emitir una luz ultravioleta, te fijas en el papel que antes estaba vacio y ves un numero escrito '9'");
                 }
