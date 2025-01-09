@@ -4,7 +4,12 @@ using System.Drawing;
 ConsoleKey continuar;
 do
 {
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.BackgroundColor = ConsoleColor.DarkRed;
+
+
     Console.WriteLine("IMPORTANTE LEER ANTES DE EMPEZAR");
+    Console.ResetColor();
     Console.WriteLine("Esto es un scape room en donde tendrás que superar ciertas pruebas para conseguir los dígitos de la clave de la puerta cerrada con un candado. \r\n");
     Console.WriteLine("Para superar estás pruebas, puedes pedir un total de 3 pistas en cada prueba.\nLa primera pista no tendrá penalización, pero las siguientes dos sí.\r\n");
     Console.WriteLine("Las soluciones  van a ser únicamente de responder con numeros o una palabra máximo. \n");
@@ -14,6 +19,8 @@ do
 
 
     //ClearScrean despues de dejar al usuario darle a siguiente y poner la pantalla inicial del scaperoom
+    Console.ForegroundColor = ConsoleColor.Black;
+    Console.BackgroundColor = ConsoleColor.Green;
     Console.WriteLine("Pulsa 'Enter' para comenzar.");
 
     continuar = Console.ReadKey().Key;
@@ -47,6 +54,7 @@ var done = false;
 do
 {
     //Descripción
+    Console.ResetColor();
     Console.Clear();
     Console.Write("\u001bc\x1b[3J");
     Console.WriteLine("Estas en un despacho donde te llaman la atención unos cuantos objetos. ¿A cuál decides ir? \n1 - Cajón con cerradura \n2 - Cuadro  \n3 - Globo terráqueo \n4 - Mesa \n5 - Estanteria \n6 - Chimenea \n7 - Caja fuerte \n8 - Ordenador  \n9 - Lampara  \n10 - Salida");
@@ -64,6 +72,8 @@ do
             do
             {
                 //Presentación de la prueba
+                Console.ResetColor();
+
                 Console.Clear();
                 Console.Write("\u001bc\x1b[3J");
                 Console.WriteLine("Te acercas al cajón que parece que requiere una llave para abrirlo.");
@@ -98,7 +108,10 @@ do
                     Console.WriteLine("Intentas abrirlo a la fuerza pero parece imposible.");
                 }
                 //Volver a la habitación o no
-                Console.WriteLine("(Pulse Enter para volver)");
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.WriteLine("(Pulse Enter para volver)"); 
+                Console.ResetColor();
                 volver = Console.ReadKey().Key;
                 
             } while (volver != ConsoleKey.Enter);
@@ -136,7 +149,10 @@ do
                     pista2 = 3;
                 }
                 //Para salir de la habitación
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.Green;
                 Console.WriteLine("(Pulse Enter para volver)");
+                Console.ResetColor();
                 volver = Console.ReadKey().Key;
             } while (volver != ConsoleKey.Enter);
             Console.WriteLine("The line");
@@ -179,7 +195,10 @@ do
                     Console.WriteLine("Intentas abrir el globo a la fuerza, pero parece imposible.");
                 }
                 //Volver atrás
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.Green;
                 Console.WriteLine("(Pulse Enter para volver)");
+                Console.ResetColor();
                 volver = Console.ReadKey().Key;
             } while (volver != ConsoleKey.Enter);
             break;
@@ -217,7 +236,10 @@ do
                     pista4 = 3;
                 }
                 //Volver
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.Green;
                 Console.WriteLine("(Pulse Enter para volver)");
+                Console.ResetColor();
                 volver = Console.ReadKey().Key;
             } while (volver != ConsoleKey.Enter);
             break;
@@ -255,7 +277,10 @@ do
                     pista5 = 3;
                 }
                 //Volver
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.Green; 
                 Console.WriteLine("(Pulse Enter para volver)");
+                Console.ResetColor();
                 volver = Console.ReadKey().Key;
             } while (volver != ConsoleKey.Enter);
             break;
@@ -294,7 +319,10 @@ do
                     pista6 = 3;
                 }
                 //Volver
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.Green; 
                 Console.WriteLine("(Pulse Enter para volver)");
+                Console.ResetColor();
                 volver = Console.ReadKey().Key;
             } while (volver != ConsoleKey.Enter);
             break;
@@ -337,7 +365,10 @@ do
                     Console.WriteLine("parece que ese no es el pin, son 4 dijitos, pero cuales...");
                 }
                 //Volver
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.Green; 
                 Console.WriteLine("(Pulse Enter para volver)");
+                Console.ResetColor();
                 volver = Console.ReadKey().Key;
             } while (volver != ConsoleKey.Enter);
             break;
@@ -377,7 +408,10 @@ do
                     pista8 = 3;
                 }
                 //Volver
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.Green; 
                 Console.WriteLine("(Pulse Enter para volver)");
+                Console.ResetColor();
                 volver = Console.ReadKey().Key;
             } while (volver != ConsoleKey.Enter);
             break;
@@ -417,7 +451,10 @@ do
 
                 }
                 //Volver
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.Green; 
                 Console.WriteLine("(Pulse Enter para volver)");
+                Console.ResetColor();
                 volver = Console.ReadKey().Key;
             } while (volver != ConsoleKey.Enter);
             break;
@@ -456,7 +493,10 @@ do
                     pista0 = 3;
                 }
                 //Volver
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.Green; 
                 Console.WriteLine("(Pulse Enter)");
+                Console.ResetColor();
                 volver = Console.ReadKey().Key;
             } while (volver != ConsoleKey.Enter);
             break;
@@ -477,7 +517,11 @@ do
 //Mensaje de victoria
 Console.Clear();
 Console.Write("\u001bc\x1b[3J");
+
+Console.ForegroundColor = ConsoleColor.Black;
+Console.BackgroundColor = ConsoleColor.Yellow;
 Console.WriteLine("ENHORABUENA!!! Has escapado!!!");
+Console.ResetColor();
 
 var elapsedMs = watch.ElapsedMilliseconds;
 
@@ -517,4 +561,4 @@ penalizaciones = penalizaciones * 10;
 
 puntuacion = puntuacion - (penalizaciones/2);
 //Mostrar puntuaje final
-Console.WriteLine("Tu puntuacion es de " + puntuacion +" sobre 10");
+Console.WriteLine("Tu puntuacion es de " + puntuacion +" sobre 100");
